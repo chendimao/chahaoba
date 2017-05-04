@@ -16,6 +16,7 @@ import {ObjToArrayPipe} from "../Pipe/ObjtoArray.pipe";
 import {CheaterTelDetailsPage} from "../pages/cheater-tel-details/cheater-tel-details";
 import {CheaterTelNewsPage} from "../pages/cheater-tel-news/cheater-tel-news";
 import {AdMob} from '@ionic-native/admob';
+import {ContactsPage} from "../pages/contacts/contacts";
 
 
 
@@ -32,6 +33,7 @@ import {AdMob} from '@ionic-native/admob';
     ObjToArrayPipe,
     CheaterTelDetailsPage,
     CheaterTelNewsPage,
+    ContactsPage
 
   ],
   imports: [
@@ -47,7 +49,8 @@ import {AdMob} from '@ionic-native/admob';
     CheaterTelPage,
     WorldZipDetailsPage,
     CheaterTelDetailsPage,
-    CheaterTelNewsPage
+    CheaterTelNewsPage,
+    ContactsPage
   ],
   providers: [
     StatusBar,

@@ -6,6 +6,7 @@ import {WorldZipPage} from "../world-zip/world-zip";
 import {CheaterTelPage} from "../cheater-tel/cheater-tel";
 import {Tabs,Platform} from "ionic-angular";
 import {AdMob} from '@ionic-native/admob';
+import {ContactsPage} from "../contacts/contacts";
 
 @Component({
   templateUrl: 'tabs.html'
@@ -18,6 +19,7 @@ export class TabsPage {
   tab2Root: any = HomeZipPage;
   tab3Root: any = WorldZipPage;
   tab4Root: any = CheaterTelPage;
+  tab5Root: any = ContactsPage;
 
   public admobid : {banner:string,interstitial:string};
   constructor(public admob:AdMob,public platform:Platform) {
