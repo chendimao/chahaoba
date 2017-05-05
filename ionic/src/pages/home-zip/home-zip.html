@@ -1,0 +1,341 @@
+<!--
+  Generated template for the HomeZip page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar [color]="'danger'">
+    <ion-title >国内长途电话区号信息</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+
+<ion-content>
+
+  <p>国内区号如下,点击名称查看更多详情</p>
+  <p>序号： 省份 地市 国内区号</p>
+
+
+    <div style="position: absolute;bottom: 8%;">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-9094871827609791"
+             data-ad-slot="2057122994"
+             data-ad-format="auto">
+        </ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+
+    <ion-item-group>
+       <ion-item-divider  color="light">北京市</ion-item-divider>
+          <span *ngFor="let pri of city_list;let i=index;">
+              <span *ngIf="pri['field_province_text']=='北京市'">
+                  <ion-item>{{pri['field_city_text']}} ( {{pri['title']}} )</ion-item>
+             </span>
+        </span>
+    </ion-item-group>
+
+    <ion-item-group>
+        <ion-item-divider  color="light">广东省</ion-item-divider>
+        <span *ngFor="let pri of city_list;let i=index;">
+                 <span *ngIf="pri['field_province_text']=='广东省'">
+                  <ion-item>{{pri['field_city_text']}} ( {{pri['title']}} )</ion-item>
+                 </span>
+        </span>
+    </ion-item-group>
+    <ion-item-group>
+        <ion-item-divider  color="light">山东省</ion-item-divider>
+        <span *ngFor="let pri of city_list;let i=index;">
+                 <span *ngIf="pri['field_province_text']=='山东省'">
+                  <ion-item>{{pri['field_city_text']}} ( {{pri['title']}} )</ion-item>
+                 </span>
+        </span>
+    </ion-item-group>
+
+    <ion-item-group>
+        <ion-item-divider  color="light">江苏省</ion-item-divider>
+        <span *ngFor="let pri of city_list;let i=index;">
+                 <span *ngIf="pri['field_province_text']=='江苏省'">
+                  <ion-item>{{pri['field_city_text']}} ( {{pri['title']}} )</ion-item>
+                 </span>
+        </span>
+    </ion-item-group>
+
+    <ion-item-group>
+        <ion-item-divider  color="light">河南省</ion-item-divider>
+        <span *ngFor="let pri of city_list;let i=index;">
+                 <span *ngIf="pri['field_province_text']=='河南省'">
+                  <ion-item>{{pri['field_city_text']}} ( {{pri['title']}} )</ion-item>
+                 </span>
+        </span>
+    </ion-item-group>
+
+    <ion-item-group>
+        <ion-item-divider  color="light">上海市</ion-item-divider>
+        <span *ngFor="let pri of city_list;let i=index;">
+                 <span *ngIf="pri['field_province_text']=='上海市'">
+                  <ion-item>{{pri['field_city_text']}} ( {{pri['title']}} )</ion-item>
+                 </span>
+        </span>
+    </ion-item-group>
+
+    <ion-item-group>
+        <ion-item-divider  color="light">河北省</ion-item-divider>
+        <span *ngFor="let pri of city_list;let i=index;">
+                 <span *ngIf="pri['field_province_text']=='河北省'">
+                  <ion-item>{{pri['field_city_text']}} ( {{pri['title']}} )</ion-item>
+                 </span>
+        </span>
+    </ion-item-group>
+
+    <ion-item-group>
+        <ion-item-divider  color="light">浙江省</ion-item-divider>
+        <span *ngFor="let pri of city_list;let i=index;">
+                 <span *ngIf="pri['field_province_text']=='浙江省'">
+                  <ion-item>{{pri['field_city_text']}} ( {{pri['title']}} )</ion-item>
+                 </span>
+        </span>
+    </ion-item-group>
+    <ion-item-group>
+        <ion-item-divider  color="light">陕西省</ion-item-divider>
+        <span *ngFor="let pri of city_list;let i=index;">
+                 <span *ngIf="pri['field_province_text']=='陕西省'">
+                  <ion-item>{{pri['field_city_text']}} ( {{pri['title']}} )</ion-item>
+                 </span>
+        </span>
+    </ion-item-group>
+
+    <ion-item-group>
+        <ion-item-divider  color="light">湖南省</ion-item-divider>
+        <span *ngFor="let pri of city_list;let i=index;">
+                 <span *ngIf="pri['field_province_text']=='湖南省'">
+                  <ion-item>{{pri['field_city_text']}} ( {{pri['title']}} )</ion-item>
+                 </span>
+        </span>
+    </ion-item-group>
+
+    <ion-item-group>
+        <ion-item-divider  color="light">重庆市</ion-item-divider>
+        <span *ngFor="let pri of city_list;let i=index;">
+                 <span *ngIf="pri['field_province_text']=='重庆市'">
+                  <ion-item>{{pri['field_city_text']}} ( {{pri['title']}} )</ion-item>
+                 </span>
+        </span>
+    </ion-item-group>
+
+
+    <ion-item-group>
+        <ion-item-divider  color="light">福建省</ion-item-divider>
+        <span *ngFor="let pri of city_list;let i=index;">
+                 <span *ngIf="pri['field_province_text']=='福建省'">
+                  <ion-item>{{pri['field_city_text']}} ( {{pri['title']}} )</ion-item>
+                 </span>
+        </span>
+    </ion-item-group>
+
+    <ion-item-group>
+        <ion-item-divider  color="light">天津市</ion-item-divider>
+        <span *ngFor="let pri of city_list;let i=index;">
+                 <span *ngIf="pri['field_province_text']=='天津市'">
+                  <ion-item>{{pri['field_city_text']}} ( {{pri['title']}} )</ion-item>
+                 </span>
+        </span>
+    </ion-item-group>
+
+    <ion-item-group>
+        <ion-item-divider  color="light">湖北省</ion-item-divider>
+        <span *ngFor="let pri of city_list;let i=index;">
+                 <span *ngIf="pri['field_province_text']=='湖北省'">
+                  <ion-item>{{pri['field_city_text']}} ( {{pri['title']}} )</ion-item>
+                 </span>
+        </span>
+    </ion-item-group>
+
+
+
+    <ion-item-group>
+        <ion-item-divider  color="light">云南省</ion-item-divider>
+        <span *ngFor="let pri of city_list;let i=index;">
+                 <span *ngIf="pri['field_province_text']=='云南省'">
+                  <ion-item>{{pri['field_city_text']}} ( {{pri['title']}} )</ion-item>
+                 </span>
+        </span>
+    </ion-item-group>
+    <ion-item-group>
+        <ion-item-divider  color="light">四川省</ion-item-divider>
+        <span *ngFor="let pri of city_list;let i=index;">
+                 <span *ngIf="pri['field_province_text']=='四川省'">
+                  <ion-item>{{pri['field_city_text']}} ( {{pri['title']}} )</ion-item>
+                 </span>
+        </span>
+    </ion-item-group>
+
+
+    <ion-item-group>
+        <ion-item-divider  color="light">广西壮族自治区</ion-item-divider>
+        <span *ngFor="let pri of city_list;let i=index;">
+                 <span *ngIf="pri['field_province_text']=='广西壮族自治区'">
+                  <ion-item>{{pri['field_city_text']}} ( {{pri['title']}} )</ion-item>
+                 </span>
+        </span>
+    </ion-item-group>
+
+    <ion-item-group>
+        <ion-item-divider  color="light">安徽省</ion-item-divider>
+        <span *ngFor="let pri of city_list;let i=index;">
+                 <span *ngIf="pri['field_province_text']=='安徽省'">
+                  <ion-item>{{pri['field_city_text']}} ( {{pri['title']}} )</ion-item>
+                 </span>
+        </span>
+    </ion-item-group>
+
+    <ion-item-group>
+        <ion-item-divider  color="light">海南省</ion-item-divider>
+        <span *ngFor="let pri of city_list;let i=index;">
+                 <span *ngIf="pri['field_province_text']=='海南省'">
+                  <ion-item>{{pri['field_city_text']}} ( {{pri['title']}} )</ion-item>
+                 </span>
+        </span>
+    </ion-item-group>
+
+
+    <ion-item-group>
+        <ion-item-divider  color="light">江西省</ion-item-divider>
+        <span *ngFor="let pri of city_list;let i=index;">
+                 <span *ngIf="pri['field_province_text']=='江西省'">
+                  <ion-item>{{pri['field_city_text']}} ( {{pri['title']}} )</ion-item>
+                 </span>
+        </span>
+    </ion-item-group>
+    <ion-item-group>
+        <ion-item-divider  color="light">山西省</ion-item-divider>
+        <span *ngFor="let pri of city_list;let i=index;">
+                 <span *ngIf="pri['field_province_text']=='山西省'">
+                  <ion-item>{{pri['field_city_text']}} ( {{pri['title']}} )</ion-item>
+                 </span>
+        </span>
+    </ion-item-group>
+
+    <ion-item-group>
+        <ion-item-divider  color="light">黑龙江省</ion-item-divider>
+        <span *ngFor="let pri of city_list;let i=index;">
+                 <span *ngIf="pri['field_province_text']=='黑龙江省'">
+                  <ion-item>{{pri['field_city_text']}} ( {{pri['title']}} )</ion-item>
+                 </span>
+        </span>
+    </ion-item-group>
+
+    <ion-item-group>
+        <ion-item-divider  color="light">内蒙古自治区</ion-item-divider>
+        <span *ngFor="let pri of city_list;let i=index;">
+                 <span *ngIf="pri['field_province_text']=='内蒙古自治区'">
+                  <ion-item>{{pri['field_city_text']}} ( {{pri['title']}} )</ion-item>
+                 </span>
+        </span>
+    </ion-item-group>
+
+
+    <ion-item-group>
+        <ion-item-divider  color="light">贵州省</ion-item-divider>
+        <span *ngFor="let pri of city_list;let i=index;">
+                 <span *ngIf="pri['field_province_text']=='贵州省'">
+                  <ion-item>{{pri['field_city_text']}} ( {{pri['title']}} )</ion-item>
+                 </span>
+        </span>
+    </ion-item-group>
+
+    <ion-item-group>
+        <ion-item-divider  color="light">甘肃省</ion-item-divider>
+        <span *ngFor="let pri of city_list;let i=index;">
+                 <span *ngIf="pri['field_province_text']=='甘肃省'">
+                  <ion-item>{{pri['field_city_text']}} ( {{pri['title']}} )</ion-item>
+                 </span>
+        </span>
+    </ion-item-group>
+
+    <ion-item-group>
+        <ion-item-divider  color="light">青海省</ion-item-divider>
+        <span *ngFor="let pri of city_list;let i=index;">
+                 <span *ngIf="pri['field_province_text']=='青海省'">
+                  <ion-item>{{pri['field_city_text']}} ( {{pri['title']}} )</ion-item>
+                 </span>
+        </span>
+    </ion-item-group>
+    <ion-item-group>
+        <ion-item-divider  color="light">新疆维吾尔自治区</ion-item-divider>
+        <span *ngFor="let pri of city_list;let i=index;">
+                 <span *ngIf="pri['field_province_text']=='新疆维吾尔自治区'">
+                  <ion-item>{{pri['field_city_text']}} ( {{pri['title']}} )</ion-item>
+                 </span>
+        </span>
+    </ion-item-group>
+    <ion-item-group>
+        <ion-item-divider  color="light">西藏自治区</ion-item-divider>
+        <span *ngFor="let pri of city_list;let i=index;">
+                 <span *ngIf="pri['field_province_text']=='西藏自治区'">
+                  <ion-item>{{pri['field_city_text']}} ( {{pri['title']}} )</ion-item>
+                 </span>
+        </span>
+    </ion-item-group>
+
+    <ion-item-group>
+        <ion-item-divider  color="light">吉林省</ion-item-divider>
+        <span *ngFor="let pri of city_list;let i=index;">
+                 <span *ngIf="pri['field_province_text']=='吉林省'">
+                  <ion-item>{{pri['field_city_text']}} ( {{pri['title']}} )</ion-item>
+                 </span>
+        </span>
+    </ion-item-group>
+
+    <ion-item-group>
+        <ion-item-divider  color="light">宁夏回族自治区</ion-item-divider>
+        <span *ngFor="let pri of city_list;let i=index;">
+                 <span *ngIf="pri['field_province_text']=='宁夏回族自治区'">
+                  <ion-item>{{pri['field_city_text']}} ( {{pri['title']}} )</ion-item>
+                 </span>
+        </span>
+    </ion-item-group>
+    <ion-item-group>
+        <ion-item-divider  color="light">香港特别行政区</ion-item-divider>
+        <span *ngFor="let pri of city_list;let i=index;">
+                 <span *ngIf="pri['field_province_text']=='香港特别行政区'">
+                  <ion-item>{{pri['field_city_text']}} ( {{pri['title']}} )</ion-item>
+                 </span>
+        </span>
+    </ion-item-group>
+    <ion-item-group>
+        <ion-item-divider  color="light">澳门特别行政区</ion-item-divider>
+        <span *ngFor="let pri of city_list;let i=index;">
+                 <span *ngIf="pri['field_province_text']=='澳门特别行政区'">
+                  <ion-item>{{pri['field_city_text']}} ( {{pri['title']}} )</ion-item>
+                 </span>
+        </span>
+    </ion-item-group>
+    <ion-item-group>
+        <ion-item-divider  color="light">台湾省</ion-item-divider>
+        <span *ngFor="let pri of city_list;let i=index;">
+                 <span *ngIf="pri['field_province_text']=='台湾省'">
+                  <ion-item>{{pri['field_city_text']}} ( {{pri['title']}} )</ion-item>
+                 </span>
+        </span>
+    </ion-item-group>
+
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+
+</ion-content>

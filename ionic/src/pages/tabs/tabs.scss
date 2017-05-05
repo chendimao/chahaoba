@@ -1,0 +1,16 @@
+.tabs-ios .tab-button[aria-selected=true] .tab-button-icon {
+   color: #F53D3D;
+ }
+
+.tabs-ios .tab-button:hover:not(.disable-hover),
+.tabs-ios .tab-button[aria-selected=true] {
+  color: #F53D3D;
+}
+
+.tabs-md .tab-button[aria-selected=true] .tab-button-icon{
+  color: #F53D3D;
+}
+
+.tabs-md .tab-button[aria-selected=true]{
+  color: #F53D3D;
+}

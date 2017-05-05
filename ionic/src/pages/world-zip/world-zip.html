@@ -1,0 +1,41 @@
+<!--
+  Generated template for the WorldZip page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+
+  <ion-navbar [color]="'danger'" >
+
+    <ion-title>国际长途电话区号信息</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <p>国际区号如下，点击名称查看更多详情</p>
+  <p>序号：国家/地区名称 国际区号</p>
+
+
+  <ion-list>
+      <span *ngFor="let worldzip of WorldList;let i=index" >
+          <ion-item class="ion-item-list" (click)="openNavDetailsPage(worldzip)">{{i+1}}.{{worldzip['field_country']}}({{worldzip['field_country_english']}}) +{{worldzip['field_areacode_text']}}</ion-item>
+
+      </span>
+
+
+  </ion-list>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+
+
+</ion-content>
+

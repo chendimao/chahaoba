@@ -1,0 +1,43 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "chahaoba.com"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "chahaoba.com"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "chahaoba.com"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "chahaoba.com"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "chahaoba.com"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "chahaoba.com"
+        },
+        "cordova-plugin-admobpro": {
+            "PACKAGE_NAME": "chahaoba.com"
+        },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "chahaoba.com"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-extension": {
+            "PACKAGE_NAME": "chahaoba.com"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "chahaoba.com"
+        }
+    }
+}
