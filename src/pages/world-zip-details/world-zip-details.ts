@@ -30,12 +30,13 @@ export class WorldZipDetailsPage {
     if (this.plt.is('mobileweb') || this.plt.is('core') || this.plt.is('windows') ) {
       this.is_browser=true;
     }
-
     this.worldzip=this.navParams.data.worldzip;
     this.service.get(this.url+this.worldzip['nid']).then(data=>{
       this.country=data['nodes'][0]['node'];
-     // console.log(data['nodes'][0]['node']['body_php']);
+      // console.log(data['nodes'][0]['node']['body_php']);
       this.body=this.country['body_php_1'];
+      this.body=this.body.replace(this.body.substr( this.body.indexOf(this.worldzip['field_country']+'电话区号参考网站'),this.body.length),'');
+      console.log(this.body);
 
 
     });
