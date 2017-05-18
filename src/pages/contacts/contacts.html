@@ -24,7 +24,7 @@
     </ion-searchbar>
 
    <span *ngFor="let contact of items ">
-       <p>{{contact['_objectInstance']['displayName']}}</p>
+       <p (click)="openNavDetailsPage(contact)">{{contact['_objectInstance']['displayName']}}</p>
        <p>{{contact['_objectInstance']['phoneNumbers']['value']}}</p>
 
        <hr>

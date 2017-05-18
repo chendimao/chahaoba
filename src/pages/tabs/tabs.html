@@ -4,5 +4,5 @@
 <ion-tab [root]="tab2Root" tabTitle="国内区号" tabIcon="cube"></ion-tab>
 <ion-tab [root]="tab3Root" tabTitle="国际区号" tabIcon="planet"></ion-tab>
 <ion-tab [root]="tab4Root" tabTitle="骗子号码" tabIcon="flame" ></ion-tab>
-<!--<ion-tab [root]="tab5Root" tabTitle="联系人" tabIcon="flame" ></ion-tab>-->
+<ion-tab *ngIf="is_browser" [root]="tab5Root" tabTitle="联系人" tabIcon="flame" ></ion-tab>
 </ion-tabs>

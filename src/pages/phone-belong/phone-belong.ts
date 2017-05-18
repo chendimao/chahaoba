@@ -34,7 +34,7 @@ export class PhoneBelongPage implements OnInit{
 
     constructor(public plt:Platform,public alertCtrl:AlertController,public loadingCtrl:LoadingController,public navCtrl: NavController, public navParams: NavParams,public formBuilder:FormBuilder,public service:HomeService) {
 
-        if (this.plt.is('mobileweb') || this.plt.is('core') || this.plt.is('windows') ) {
+        if (this.plt.is('mobileweb') || this.plt.is('core') ) {
             this.is_browser=true;
         }
 
