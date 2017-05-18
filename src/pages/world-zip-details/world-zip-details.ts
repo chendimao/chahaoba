@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {AlertController, LoadingController, NavController, NavParams} from 'ionic-angular';
+import {AlertController, LoadingController, NavController, NavParams, Platform} from 'ionic-angular';
 import {HomeService} from "../../providers/home-service";
 
 
@@ -24,7 +24,12 @@ export class WorldZipDetailsPage {
   public body:string;
   public url:string='https://www.chahaoba.cn/country-json/';
   public comment_url:string='';
-  constructor(public loadCtrl:LoadingController,public AlertCtrl:AlertController,public navCtrl: NavController, public navParams: NavParams,public service:HomeService) {
+  public is_browser:boolean;
+  constructor(public plt:Platform,public loadCtrl:LoadingController,public AlertCtrl:AlertController,public navCtrl: NavController, public navParams: NavParams,public service:HomeService) {
+
+    if (this.plt.is('mobileweb') || this.plt.is('core') || this.plt.is('windows') ) {
+      this.is_browser=true;
+    }
 
     this.worldzip=this.navParams.data.worldzip;
     this.service.get(this.url+this.worldzip['nid']).then(data=>{

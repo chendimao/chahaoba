@@ -35,7 +35,7 @@ export class MyApp {
     //     this.admob.showBanner(8);
     //   });
 
-      
+
       if( /(android)/i.test(navigator.userAgent) ) { // for android
         this.admobid = {
           banner: 'ca-app-pub-9094871827609791/5423602991', // or DFP format "/6253334/dfp_example_ad"
@@ -43,8 +43,8 @@ export class MyApp {
         };
       } else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) { // for ios
         this.admobid = {
-          banner: 'ca-app-pub-9094871827609791/5423602991', // or DFP format "/6253334/dfp_example_ad"
-          interstitial: 'ca-app-pub-9094871827609791/6900336196'
+          banner: 'ca-app-pub-9094871827609791/7863438192', // or DFP format "/6253334/dfp_example_ad"
+          interstitial: 'ca-app-pub-9094871827609791/6760735396'
         };
       } else { // for windows phone
         this.admobid = {
@@ -54,31 +54,18 @@ export class MyApp {
       }
 
       // 显示广告条,默认在顶端的智能广告条
-      if(this.admob) this.admob.createBanner( this.admobid.banner );
-//
-// 或者, 在底部显示广告条
-//       if(AdMob) this.admob.createBanner( {
-//         adId:this.admobid.banner,
-//         position:this.admob.AD_POSITION.BOTTOM_CENTER,
-//         autoShow:true} );
-//
-// 或者,已浮动模式,在底部显示方块广告
-//       if(this.admob) this.admob.createBanner( {
-//         adId:this.admobid.banner,
-//         adSize:'MEDIUM_RECTANGLE',
-//         overlap:true,
-//         position:this.admob.AD_POSITION.BOTTOM_CENTER,
-//         autoShow:true} );
-//
-// // 或者,在指定的位置,显示指定大小的广告
-//       if(this.admob) this.admob.createBanner( {
-//         adId:this.admobid.banner,
-//         adSize:'SMART_BANNER',
-//         overlap:true,
-//         position:this.admob.AD_POSITION.POS_XY, x:0, y:800,
-//         autoShow:true} );
+      if(this.admob) {
+        this.admob.createBanner( this.admobid.banner );
 
 
+      }
+
+      if(this.admob) this.admob.createBanner( {
+        adId:this.admobid.banner,
+        adSize:'SMART_BANNER',
+        overlap:false,
+        position:this.admob.AD_POSITION.TOP_CENTER,
+        autoShow:true} );
 
 
 

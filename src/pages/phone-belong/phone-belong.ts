@@ -1,5 +1,5 @@
 ﻿import {Component, OnInit} from '@angular/core';
-import {NavController, NavParams, LoadingController, AlertController} from 'ionic-angular';
+import {NavController, NavParams, LoadingController, AlertController, Platform} from 'ionic-angular';
 import {HomeService} from "../../providers/home-service";
 import {FormGroup, FormBuilder, Validators} from "@angular/forms";
 
@@ -30,9 +30,15 @@ export class PhoneBelongPage implements OnInit{
     //定义一个url
    url: string;
   
+    public is_browser:boolean;
+
+    constructor(public plt:Platform,public alertCtrl:AlertController,public loadingCtrl:LoadingController,public navCtrl: NavController, public navParams: NavParams,public formBuilder:FormBuilder,public service:HomeService) {
+
+        if (this.plt.is('mobileweb') || this.plt.is('core') || this.plt.is('windows') ) {
+            this.is_browser=true;
+        }
 
 
-    constructor(public alertCtrl:AlertController,public loadingCtrl:LoadingController,public navCtrl: NavController, public navParams: NavParams,public formBuilder:FormBuilder,public service:HomeService) {
         //验证title表单不能为空
         this.todo = this.formBuilder.group({
            title:['',Validators.required],

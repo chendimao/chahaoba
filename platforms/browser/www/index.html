@@ -35,16 +35,16 @@
 
 
 <body>
-  
+
   <!-- Ionic's root component and where the app will load -->
-  <ion-app></ion-app>
+  <ion-app class="root-apps"></ion-app>
 
   <!-- The polyfills js is generated during the build process -->
   <script src="build/polyfills.js"></script>
 
   <!-- The bundle js is generated during the build process -->
   <script src="build/main.js"></script>
-  <div style="position: absolute;bottom: 6%;width:100%;height: 100px;">
+  <div style="margin-top:65px;margin-bottom:3%;width:100%;height: 100px;" id="ad">
       <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
       <ins class="adsbygoogle"
            style="display:block"
@@ -57,5 +57,12 @@
       </script>
   </div>
 </body>
+<script>
+    var root=document.getElementsByClassName('root-apps');
+    var ad = document.getElementById('ad');
+
+</script>
+
+
 
 </html>

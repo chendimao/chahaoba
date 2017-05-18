@@ -15,9 +15,12 @@
 
 <ion-content padding>
 
-    <div style="width:100%;height: 100px;">
+     <span *ngIf="is_browser">
+            <div style="width:100%;height: 80px;">
 
-    </div>
+            </div>
+          <hr>
+      </span>
 
     <p>国家和地区：{{worldzip['field_country']}}</p>
     <p>英文名称：{{worldzip['field_alias']}}</p>

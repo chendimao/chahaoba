@@ -24540,6 +24540,10 @@ ion-navbar.toolbar {
   content: '\e601';
 }
 
+.toolbar-ios {
+  min-height: 55px;
+}
+
 .page-input {
   width: 30px;
   height: 20px;

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {LoadingController, NavController, NavParams} from 'ionic-angular';
+import {LoadingController, NavController, NavParams,Platform} from 'ionic-angular';
 import {HomeService} from "../../providers/home-service";
 import {CheaterTelDetailsPage} from "../cheater-tel-details/cheater-tel-details";
 import {FormGroup,FormBuilder,Validators} from "@angular/forms";
@@ -31,7 +31,13 @@ export class CheaterTelPage  implements OnInit{
   public pages:number;
   public page:number=0;
   public url:string='https://www.chahaoba.cn/number-json/';
-    constructor(private formBuilder: FormBuilder,public loadingCtrl:LoadingController,public navCtrl: NavController, public navParams: NavParams,public service:HomeService) {
+  public is_browser: boolean;
+    constructor(public plt:Platform,private formBuilder: FormBuilder,public loadingCtrl:LoadingController,public navCtrl: NavController, public navParams: NavParams,public service:HomeService) {
+
+      if (this.plt.is('mobileweb') || this.plt.is('core') || this.plt.is('windows') ) {
+        this.is_browser=true;
+      }
+
 
       this.todo=this.formBuilder.group({
         'page':['',Validators.required],

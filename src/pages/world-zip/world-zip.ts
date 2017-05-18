@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, LoadingController } from 'ionic-angular';
+import { NavController, NavParams, LoadingController,Platform } from 'ionic-angular';
 import {HomeService} from "../../providers/home-service";
 import {WorldZipDetailsPage} from '../world-zip-details/world-zip-details';
 
@@ -18,7 +18,14 @@ export class WorldZipPage {
   public WorldZips:Array<WorldZip>;
   public WorldList:Array<WorldZip>;
   url:string='https://www.chahaoba.cn/international-areacode-json';
-  constructor(public loadingCtrl:LoadingController,public navCtrl: NavController, public navParams: NavParams,public service:HomeService) {
+  public is_browser: boolean;
+  constructor(public plt:Platform,public loadingCtrl:LoadingController,public navCtrl: NavController, public navParams: NavParams,public service:HomeService) {
+
+    if (this.plt.is('mobileweb') || this.plt.is('core') || this.plt.is('windows') ) {
+      this.is_browser=true;
+    }
+
+
     var worldlsit=Array();
 
     let loader = this.loadingCtrl.create({

@@ -5,7 +5,7 @@ import { MyApp } from './app.component';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
+import {Contacts}  from '@ionic-native/contacts';
 import {PhoneBelongPage} from "../pages/phone-belong/phone-belong";
 import {HomeZipPage} from "../pages/home-zip/home-zip";
 import {WorldZipPage} from "../pages/world-zip/world-zip";
@@ -56,6 +56,8 @@ import {ContactsPage} from "../pages/contacts/contacts";
     StatusBar,
     SplashScreen,
       AdMob,
+    Contacts,
+    ContactsPage,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
 
   ]

@@ -5,9 +5,12 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-    <div style="width:100%;height: 100px;">
+   <span *ngIf="is_browser">
+            <div style="width:100%;height: 80px;">
 
-    </div>
+            </div>
+          <hr>
+      </span>
   <ion-navbar [color]="'danger'">
     <ion-title>{{ cheater['title']}}({{cheater['field_tags']}})</ion-title>
   </ion-navbar>
@@ -45,7 +48,7 @@
         <ion-textarea  rows='5' [(ngModel)]="todo.page" formControlName="page" ></ion-textarea>
 
         <span class="input-group-btn" >
-          <button type="submit" class="button-block" ion-button>提交评论</button>
+          <button type="submit" class="button-block" ion-button [disabled]="!todo.valid">提交评论</button>
           <button type="reset" class="button-block" ion-button color='light'>清除内容</button>
         </span>
 

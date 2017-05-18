@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {NavController, NavParams, LoadingController, AlertController} from 'ionic-angular';
+import {NavController, NavParams, LoadingController, AlertController, Platform} from 'ionic-angular';
 import {HomeService} from "../../providers/home-service";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 
@@ -34,10 +34,16 @@ export class CheaterTelDetailsPage {
   public show_comment_url:string='https://www.chahaoba.cn/comment-json/';
   public show_comment_data:Array<ShowComment>;
   public CommentList:Array<ShowComment>;
+  public is_browser:boolean;
 
 
+  constructor(public plt:Platform,public formBuilder:FormBuilder,public AlertCtrl:AlertController,public loadingCtrl:LoadingController,public navCtrl: NavController, public navParams: NavParams,public service:HomeService) {
 
-  constructor(public formBuilder:FormBuilder,public AlertCtrl:AlertController,public loadingCtrl:LoadingController,public navCtrl: NavController, public navParams: NavParams,public service:HomeService) {
+
+      if (this.plt.is('mobileweb') || this.plt.is('core') || this.plt.is('windows') ) {
+          this.is_browser=true;
+      }
+
 
 
       this.cheater=this.navParams.data.cheater;

@@ -5,9 +5,12 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-    <div style="width:100%;height: 100px;">
+     <span *ngIf="is_browser">
+            <div style="width:100%;height: 80px;">
 
-    </div>
+            </div>
+          <hr>
+      </span>
     <ion-navbar [color]="'danger'">
         <ion-title>发布新号码</ion-title>
     </ion-navbar>

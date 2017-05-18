@@ -1,41 +1,69 @@
-///<reference path="../../../node_modules/@ionic-native/contacts/index.d.ts"/>
+
+
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-import {Contacts, ContactFieldType} from '@ionic-native/contacts';
-import {Platform} from "ionic-angular";
-
-
+import { NavController,AlertController } from 'ionic-angular';
+import { Contacts, Contact, ContactField, ContactName } from '@ionic-native/contacts';
+import {pinyin} from 'pinyin';
 @Component({
   selector: 'page-contacts',
   templateUrl: 'contacts.html'
 })
 export class ContactsPage {
-  contactlist: any;
-  contacttobefound = '';
-  contactsfound = [];
-  search = false;
-  ourvalue: ContactFieldType[]=['displayName'];
+public lianxi:any;
+public  items;
+constructor(public navCtrl: NavController,public contacts: Contacts) {
 
-  savefn(){
-    //this.nav.push(AddcontactPage);
+ // let contact: Contact = this.contacts.create();
+  var lianxiren=Array();
+
+  this.contacts.find(['*']).then((contacts)=>{
+
+    contacts.forEach(function(value,index,arr){
+     // alert(JSON.stringify(value['_objectInstance']['displayName']));
+      //lianxiren.push([new contact(value['_objectInstance']['displayName'],value['_objectInstance']['name']['familyName'],value['_objectInstance']['phoneNumbers']['value'])]);
+     // this.lianxi=lianxiren;
+      //alert(JSON.stringify(lianxiren));
+    });
+    this.lianxi=contacts;
+    this.initializeItems();
+
+  })
+
+
+}
+
+  initializeItems() {
+    this.items=this.lianxi;
+
   }
 
-  findfn(val){
-    
-      Contacts.find(this.ourvalue,{filter:val}).then((contacts)=>{
-        this.contactsfound=contacts;
-        alert(JSON.stringify(contacts[0]));
-      });
+  getItems(ev){
+    this.initializeItems();
 
-      if(this.contactsfound.length==0){
-        this.contactsfound.push({displayName:'No contact find'});
-        this.search=true;
-      }
+        var val = ev.target.value;
+        var val_tmp=Array();
+
+        //alert(val);
+       // alert(this.items[0]['_objectInstance']['displayName']);
+    if (val && val.trim() != '') {
+      this.items = this.items.filter((item) => {
+        //alert(item['_objectInstance']['displayName']);
+        return (item['_objectInstance']['displayName'].indexOf(val) > -1);
+      })
+    }
+     // alert(this.items);
   }
-  constructor(public platform:Platform,public navCtrl: NavController, public navParams: NavParams) {
+
+}
+
+export class contact{
+  constructor(
+
+      public displayName:string,
+      public familyName:string,
+      public tel:string
+
+  ){
 
   }
-
-
-
 }

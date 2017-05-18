@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {NavController, NavParams, LoadingController, AlertController} from 'ionic-angular';
+import {NavController, NavParams, LoadingController, AlertController, Platform} from 'ionic-angular';
 import {HomeService} from "../../providers/home-service";
 import {FormGroup,FormBuilder,Validators} from "@angular/forms";
 
@@ -20,9 +20,15 @@ export class CheaterTelNewsPage {
   public url:string='https://www.chahaoba.cn/drupalgap/node.json';
   public data:string;
   public loader;
+  public is_browser;
+
+  constructor(public plt:Platform,public alertCtrl:AlertController,public loadingCtrl:LoadingController,public formBuilder:FormBuilder,public navCtrl: NavController, public navParams: NavParams,public Service:HomeService) {
+
+    if (this.plt.is('mobileweb') || this.plt.is('core') || this.plt.is('windows') ) {
+      this.is_browser=true;
+    }
 
 
-  constructor(public alertCtrl:AlertController,public loadingCtrl:LoadingController,public formBuilder:FormBuilder,public navCtrl: NavController, public navParams: NavParams,public Service:HomeService) {
     this.todo=this.formBuilder.group({
       'page':['',Validators.required],
       'types':['',Validators.required],
