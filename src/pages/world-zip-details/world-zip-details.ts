@@ -27,7 +27,7 @@ export class WorldZipDetailsPage {
   public is_browser:boolean;
   constructor(public plt:Platform,public loadCtrl:LoadingController,public AlertCtrl:AlertController,public navCtrl: NavController, public navParams: NavParams,public service:HomeService) {
 
-    if (this.plt.is('mobileweb') || this.plt.is('core') || this.plt.is('windows') ) {
+    if (this.plt.is('mobileweb') || this.plt.is('core')) {
       this.is_browser=true;
     }
     this.worldzip=this.navParams.data.worldzip;
@@ -35,8 +35,11 @@ export class WorldZipDetailsPage {
       this.country=data['nodes'][0]['node'];
       // console.log(data['nodes'][0]['node']['body_php']);
       this.body=this.country['body_php_1'];
-      this.body=this.body.replace(this.body.substr( this.body.indexOf(this.worldzip['field_country']+'电话区号参考网站'),this.body.length),'');
-      console.log(this.body);
+
+
+      if(this.plt.is('mobileweb') || this.plt.is('core')){
+        this.body=this.body.replace(this.body.substr( this.body.indexOf(this.worldzip['field_country']+'电话区号参考网站'),this.body.length),'');
+      }
 
 
     });
