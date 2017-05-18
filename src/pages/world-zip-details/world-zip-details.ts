@@ -37,7 +37,8 @@ export class WorldZipDetailsPage {
       this.body=this.country['body_php_1'];
 
 
-      if(this.plt.is('mobileweb') || this.plt.is('core')){
+      if(!this.plt.is('mobileweb')){
+
         this.body=this.body.replace(this.body.substr( this.body.indexOf(this.worldzip['field_country']+'电话区号参考网站'),this.body.length),'');
       }
 
