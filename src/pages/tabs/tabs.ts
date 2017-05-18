@@ -21,8 +21,15 @@ export class TabsPage {
   tab4Root: any = CheaterTelPage;
   tab5Root: any = ContactsPage;
 
+  public is_browser:boolean;
+
   public admobid : {banner:string,interstitial:string};
-  constructor(public admob:AdMob,public platform:Platform) {
+  constructor(public plt:Platform,public admob:AdMob,public platform:Platform) {
+
+    if (this.plt.is('mobileweb') || this.plt.is('core') ) {
+      this.is_browser=false;
+    }
+
   this.platform.ready().then(()=>{
 
 
