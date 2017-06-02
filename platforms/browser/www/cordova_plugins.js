@@ -143,6 +143,29 @@ module.exports = [
         "merges": [
             "navigator.contacts"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-network-information/www/network.js",
+        "id": "cordova-plugin-network-information.network",
+        "pluginId": "cordova-plugin-network-information",
+        "clobbers": [
+            "navigator.connection",
+            "navigator.network.connection"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-network-information/www/Connection.js",
+        "id": "cordova-plugin-network-information.Connection",
+        "pluginId": "cordova-plugin-network-information",
+        "clobbers": [
+            "Connection"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-network-information/src/browser/network.js",
+        "id": "cordova-plugin-network-information.NetworkInfoProxy",
+        "pluginId": "cordova-plugin-network-information",
+        "runs": true
     }
 ];
 module.exports.metadata = 
@@ -157,7 +180,8 @@ module.exports.metadata =
     "cordova-plugin-extension": "1.5.1",
     "cordova-plugin-admobpro": "2.28.3",
     "cordova-plugin-compat": "1.1.0",
-    "cordova-plugin-contacts": "2.3.1"
+    "cordova-plugin-contacts": "2.3.1",
+    "cordova-plugin-network-information": "1.3.3"
 }
 // BOTTOM OF METADATA
 });

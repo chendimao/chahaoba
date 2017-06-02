@@ -64,8 +64,8 @@ export class MyApp {
         adId:this.admobid.banner,
         adSize:'SMART_BANNER',
         overlap:false,
-        position:this.admob.AD_POSITION.TOP_CENTER,
-        autoShow:true} );
+        position:this.admob.AD_POSITION.BOTTOM_CENTER,
+        } );
 
 
 
@@ -80,9 +80,10 @@ export class MyApp {
 
   registerBackButtonAction() {
     this.platform.registerBackButtonAction(() => {
+      //alert(JSON.stringify(this.ionicApp._loadingPortal.getActive()));
       //如果想点击返回按钮隐藏toast或loading或Overlay就把下面加上
-      // this.ionicApp._toastPortal.getActive() || this.ionicApp._loadingPortal.getActive() || this.ionicApp._overlayPortal.getActive()
-      let activePortal = this.ionicApp._modalPortal.getActive();
+       //this.ionicApp._toastPortal.getActive() || this.ionicApp._loadingPortal.getActive() || this.ionicApp._overlayPortal.getActive()
+      let activePortal =this.ionicApp._loadingPortal.getActive();
       if (activePortal) {
         activePortal.dismiss().catch(() => {
         });

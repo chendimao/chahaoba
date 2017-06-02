@@ -2,7 +2,7 @@
 import {NavController, NavParams, LoadingController, AlertController, Platform} from 'ionic-angular';
 import {HomeService} from "../../providers/home-service";
 import {FormGroup, FormBuilder, Validators} from "@angular/forms";
-
+import {Network} from '@ionic-native/network'
 /*
   Generated class for the PhoneBelong page.
 
@@ -32,7 +32,7 @@ export class PhoneBelongPage implements OnInit{
   
     public is_browser:boolean;
 
-    constructor(public plt:Platform,public alertCtrl:AlertController,public loadingCtrl:LoadingController,public navCtrl: NavController, public navParams: NavParams,public formBuilder:FormBuilder,public service:HomeService) {
+    constructor(public network:Network,public plt:Platform,public alertCtrl:AlertController,public loadingCtrl:LoadingController,public navCtrl: NavController, public navParams: NavParams,public formBuilder:FormBuilder,public service:HomeService) {
 
         if (this.plt.is('mobileweb') || this.plt.is('core') ) {
             this.is_browser=true;

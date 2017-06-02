@@ -17,8 +17,8 @@ import {CheaterTelDetailsPage} from "../pages/cheater-tel-details/cheater-tel-de
 import {CheaterTelNewsPage} from "../pages/cheater-tel-news/cheater-tel-news";
 import {AdMob} from '@ionic-native/admob';
 import {ContactsPage} from "../pages/contacts/contacts";
-
-
+import {Network} from '@ionic-native/network'
+import {ContactDetailsPage} from '../pages/contact-details/contact-details';
 
 
 @NgModule({
@@ -33,11 +33,19 @@ import {ContactsPage} from "../pages/contacts/contacts";
     ObjToArrayPipe,
     CheaterTelDetailsPage,
     CheaterTelNewsPage,
-    ContactsPage
+    ContactsPage,
+    ContactDetailsPage
 
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp, {
+      backButtonText: '返回',
+      iconMode: 'ios',
+      modalEnter: 'modal-slide-in',
+      modalLeave: 'modal-slide-out',
+      tabsPlacement: 'bottom',
+      pageTransition: 'ios-transition'
+    }, {}),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -58,6 +66,7 @@ import {ContactsPage} from "../pages/contacts/contacts";
       AdMob,
     Contacts,
     ContactsPage,
+    Network,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
 
   ]

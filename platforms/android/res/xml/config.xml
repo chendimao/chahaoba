@@ -26,6 +26,9 @@
     <feature name="Contacts">
         <param name="android-package" value="org.apache.cordova.contacts.ContactManager" />
     </feature>
+    <feature name="NetworkStatus">
+        <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
+    </feature>
     <name>查号吧</name>
     <description>号码归属地查询 国内区号查询 国际区号查询 骗子号码曝光</description>
     <author email="122803265@qq.com" href="https://www.chahaoba.com">查号吧</author>

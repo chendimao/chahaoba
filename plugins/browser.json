@@ -30,6 +30,9 @@
         },
         "cordova-plugin-contacts": {
             "PACKAGE_NAME": "chahaoba.com"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "chahaoba.com"
         }
     },
     "dependent_plugins": {
